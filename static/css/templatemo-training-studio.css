@@ -37,6 +37,15 @@ font & reset css
 reset
 ---------------------------------------------
 */
+
+
+
+#cards {
+  display: flex;
+}
+
+
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
 pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
 s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
@@ -47,9 +56,6 @@ figure, header, nav, section, article, aside, footer, figcaption {
   outline: 0;
 }
 
-#cards {
-  display: none;
-}
 .clearfix:after {
   content: ".";
   display: block;
@@ -676,7 +682,7 @@ features
 }
 
 .feature-item {
-  /* display: flex;
+  display: flex;
   flex-direction: row;
   margin-bottom: 60px;
 }
