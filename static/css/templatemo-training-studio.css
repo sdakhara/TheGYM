@@ -40,8 +40,9 @@ reset
 
 
 
-#cards {
+#cards li{
   display: flex;
+  
 }
 
 
