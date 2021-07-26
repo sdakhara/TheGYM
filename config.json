@@ -1,0 +1,5 @@
+{
+  "databasePARA": {
+    "URI": "mysql+pymysql://root:@127.0.0.1:3306/the_gym"
+  }
+}

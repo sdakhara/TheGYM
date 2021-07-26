@@ -1,0 +1,22 @@
+{
+  "fitness_class": {
+    "monday": "10:00AM - 11:30AM",
+    "tuesday": "2:00PM - 3:30PM"
+  },
+  "muscle_class": {
+    "friday": "10:00AM - 11:30AM",
+    "thursday": "2:00PM - 3:30PM"
+  },
+  "body_building": {
+    "tuesday": "10:00AM - 11:30AM",
+    "monday": "2:00PM - 3:30PM"
+  },
+  "yoga_training": {
+    "wednesday": "10:00AM - 11:30AM",
+    "friday": "2:00PM - 3:30PM"
+  },
+  "advance_training": {
+    "thursday": "10:00AM - 11:30AM",
+    "wednesday": "2:00PM - 3:30PM"
+  }
+}
