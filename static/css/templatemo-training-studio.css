@@ -40,9 +40,9 @@ reset
 
 
 
-#cards li{
+#cards {
   display: flex;
-
+  flex-direction: row;
 }
 
 
