@@ -92,13 +92,18 @@ def index():
         email = request.form.get('email')
         subject = request.form.get('subject')
         message = request.form.get('message')
-        entry = query(Q_DATE=datetime.datetime.now(), Q_NAME=name, Q_EMAIL=email, Q_SUBJECT=subject, Q_MESSAGE=message)
+        entry = query(Q_DATE=datetime.datetime.now(), Q_NAME=name,
+                      Q_EMAIL=email, Q_SUBJECT=subject, Q_MESSAGE=message)
         db.add(entry)
         db.commit()
     courcedetails = db.query(courcedata).all()
     classesdetails = db.query(ourclasses).all()
-    return render_template('index.html', fitnessClass=fitnessClass, muscleClass=muscleClass, bodyBuilding=bodyBuilding,
-                           yogaTraining=yogaTraining, advanceTraining=advanceTraining, courcedetails=courcedetails, classesdetails=classesdetails)
+    return render_template('index.html', fitnessClass=fitnessClass, muscleClass=muscleClass, bodyBuilding=bodyBuilding, yogaTraining=yogaTraining, advanceTraining=advanceTraining, courcedetails=courcedetails, classesdetails=classesdetails)
+
+
+@app.route('/hello')
+def hello():
+    return "<h1>hello</h1>"
 
 
 if __name__ == '__main__':

@@ -670,10 +670,11 @@ features
 }
 
 .feature-item {
-  display: flex;
+  /* display: flex;
   flex-direction: row;
-  margin-bottom: 60px;
-
+  margin-bottom: 60px; */
+display: flex;
+flex-direction: row;
 }
 
 .feature-item .left-icon img {
