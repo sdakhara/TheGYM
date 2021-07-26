@@ -22,6 +22,9 @@ Table of contents
 11. search
 12. portfolio
 
+
+
+
 --------------------------------------------- */
 /*
 ---------------------------------------------
@@ -44,6 +47,9 @@ figure, header, nav, section, article, aside, footer, figcaption {
   outline: 0;
 }
 
+#cards {
+  display: none;
+}
 .clearfix:after {
   content: ".";
   display: block;
@@ -672,9 +678,7 @@ features
 .feature-item {
   /* display: flex;
   flex-direction: row;
-  margin-bottom: 60px; */
-display: flex;
-flex-direction: row;
+  margin-bottom: 60px;
 }
 
 .feature-item .left-icon img {
