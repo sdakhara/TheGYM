@@ -98,7 +98,9 @@ def index():
         db.commit()
     courcedetails = db.query(courcedata).all()
     classesdetails = db.query(ourclasses).all()
-    return render_template('index.html', fitnessClass=fitnessClass, muscleClass=muscleClass, bodyBuilding=bodyBuilding, yogaTraining=yogaTraining, advanceTraining=advanceTraining, courcedetails=courcedetails, classesdetails=classesdetails)
+    return render_template('index.html', fitnessClass=fitnessClass, muscleClass=muscleClass, bodyBuilding=bodyBuilding,
+                           yogaTraining=yogaTraining, advanceTraining=advanceTraining, courcedetails=courcedetails,
+                           classesdetails=classesdetails)
 
 
 @app.route('/hello')
