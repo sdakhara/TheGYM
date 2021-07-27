@@ -43,6 +43,7 @@ reset
 #cards {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 
@@ -683,8 +684,7 @@ features
 }
 
 .feature-item {
-  display: flex;
-  flex-direction: row;
+  display: block;
   margin-bottom: 60px;
 }
 
