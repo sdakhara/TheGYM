@@ -40,11 +40,7 @@ reset
 
 
 
-#cards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
+
 
 
 
@@ -678,6 +674,10 @@ banner
 features
 ---------------------------------------------
 */
+
+#cards {
+  
+}
 
 #features {
   margin-bottom: 80px;
