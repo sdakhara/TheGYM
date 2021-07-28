@@ -689,6 +689,7 @@ features
 .feature-item {
   display: inline-block;
   margin-bottom: 60px;
+  width: 550px;
 }
 
 .feature-item .left-icon img {
