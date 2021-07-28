@@ -677,15 +677,17 @@ features
 
 #cards {
   column-count: 2;
-  column-gap: 1rem;
+  column-gap: 10rem;
+  width: 100%;
 }
+
 
 #features {
   margin-bottom: 80px;
 }
 
 .feature-item {
-  display: block;
+  display: inline-block;
   margin-bottom: 60px;
 }
 
