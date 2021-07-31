@@ -96,7 +96,8 @@ def index():
                       Q_EMAIL=email, Q_SUBJECT=subject, Q_MESSAGE=message)
         db.add(entry)
         db.commit()
-    return render_template('index.html')
+    courcedetails = db.query(courcedata).all()
+    return render_template('index.html', courcedetails=courcedetails)
 
 
 if __name__ == '__main__':
