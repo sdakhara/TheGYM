@@ -8,16 +8,16 @@ import json
 
 with open('config.json', 'r') as config:
     databasePARA = json.load(config)['databasePARA']
-with open('timetable.json', 'r') as timetable:
-    fitnessClass = json.load(timetable)['fitness_class']
-with open('timetable.json', 'r') as timetable:
-    muscleClass = json.load(timetable)['muscle_class']
-with open('timetable.json', 'r') as timetable:
-    bodyBuilding = json.load(timetable)['body_building']
-with open('timetable.json', 'r') as timetable:
-    yogaTraining = json.load(timetable)['yoga_training']
-with open('timetable.json', 'r') as timetable:
-    advanceTraining = json.load(timetable)['advance_training']
+# with open('timetable.json', 'r') as timetable:
+#     fitnessClass = json.load(timetable)['fitness_class']
+# with open('timetable.json', 'r') as timetable:
+#     muscleClass = json.load(timetable)['muscle_class']
+# with open('timetable.json', 'r') as timetable:
+#     bodyBuilding = json.load(timetable)['body_building']
+# with open('timetable.json', 'r') as timetable:
+#     yogaTraining = json.load(timetable)['yoga_training']
+# with open('timetable.json', 'r') as timetable:
+#     advanceTraining = json.load(timetable)['advance_training']
 
 app = Flask(__name__)
 engine = create_engine(databasePARA.get('URI'))
@@ -96,16 +96,7 @@ def index():
                       Q_EMAIL=email, Q_SUBJECT=subject, Q_MESSAGE=message)
         db.add(entry)
         db.commit()
-    courcedetails = db.query(courcedata).all()
-    classesdetails = db.query(ourclasses).all()
-    return render_template('index.html', fitnessClass=fitnessClass, muscleClass=muscleClass, bodyBuilding=bodyBuilding,
-                           yogaTraining=yogaTraining, advanceTraining=advanceTraining, courcedetails=courcedetails,
-                           classesdetails=classesdetails)
-
-
-@app.route('/hello')
-def hello():
-    return "<h1>hello</h1>"
+    return render_template('index.html')
 
 
 if __name__ == '__main__':
