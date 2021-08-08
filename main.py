@@ -20,7 +20,7 @@ with open('config.json', 'r') as config:
 #     advanceTraining = json.load(timetable)['advance_training']
 
 app = Flask(__name__)
-engine = create_engine(databasePARA.get('URI'))
+engine = create_engine(databasePARA.get('URI'), echo=True)
 Base = declarative_base()
 Session = sessionmaker(bind=engine)
 db = Session()
@@ -97,8 +97,10 @@ def index():
         db.add(entry)
         db.commit()
     courcedetails = db.query(courcedata).all()
+    # if request.method:
+    #     courcedetails = db.query(courcedata).all()
     return render_template('index.html', courcedetails=courcedetails)
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0")
